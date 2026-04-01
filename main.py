@@ -113,7 +113,7 @@ async def rolespam(ctx):
     """
     await ctx.message.delete()
     for i in range(100):
-        await ctx.guild.create_role(name="wizzez by someone haha")
+        await ctx.guild.create_role(name="wizzed by someone haha")
     """
     Spam roles in the server.
     """
